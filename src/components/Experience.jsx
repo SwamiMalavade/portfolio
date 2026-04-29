@@ -14,31 +14,29 @@ const EXPERIENCES = [
     role: 'Sr. Software Developer',
     location: 'Pune, India',
     period: 'Mar 2024 – Present',
-    product: 'Multiple Client Projects — Fintech, Pharma',
-    tech: ['ReactJS', 'Redux', 'NestJS', 'ExpressJS', 'Node.js', 'MUI', 'MySQL'],
+    product: 'Multiple Client Projects — Fintech, Pharma, Auto Parts',
+    tech: ['ReactJS', 'Redux', 'Java', 'Spring Boot', 'TypeScript', 'NestJS', 'ExpressJS', 'Node.js', 'MySQL'],
     bullets: [
-      'Worked on multiple client projects using ReactJS, Redux, ExpressJS, and Material UI (MUI) to build scalable and responsive web applications.',
-      'Led a team of 2 developers and successfully delivered a Developer Portal for a fintech client, taking end-to-end ownership of a mini project.',
-      'Drove web accessibility implementation by enforcing WCAG guidelines and leveraging axe DevTools, ensuring ADA compliance and significantly enhancing usability for users with disabilities.',
-      'Proactively ensured the Developer Portal was ADA-compliant, improving accessibility and overall user experience.',
-      'For a fintech client, gained domain expertise in cheque processing workflows and integrated a physical cheque scanner using the Silver Bullet driver for API-based cheque processing.',
+      'Worked on multiple client projects to build scalable and responsive web applications as follows.',
+      'For a fintech client, gained domain expertise in cheque processing workflows and integrated a physical cheque scanner using the Silver Bullet driver for API-based cheque processing. Developed backend services using Java (Spring Boot) for cheque processing, including REST APIs for bulk uploads, status tracking, and validation workflows. Designed database schemas and integrated MySQL for storing cheque, batch, and transaction data efficiently.',
+      'Led a team of 2 developers and successfully delivered a Developer Portal for a fintech client, taking end-to-end ownership of a mini project. Drove web accessibility implementation by enforcing WCAG guidelines and leveraging axe DevTools, ensuring ADA compliance and significantly enhancing usability for users with disabilities.',
       'Developed a learning portal for a pharmaceutical client, enabling secure login, training content access, and product update visibility.',
-      'Actively participated in daily Scrum ceremonies with clients, ensuring clear communication, requirement alignment, and timely delivery.',
-      'Contributed to backend development using NestJS, implementing a column-level permission system with MySQL to enforce fine-grained data access control.',
+      'Built an inventory management system for an auto parts client using Java (Spring Boot), React, and NoSQL. Implemented region-specific search optimization in the database to improve query performance and data retrieval efficiency. Enhanced API performance by parallelizing database calls across categories and regions, significantly reducing latency and improving response times.',
     ],
   },
   {
     company: 'LMV IT Solutions',
-    role: 'Frontend Developer',
+    role: 'Software Developer',
     location: 'India',
     period: 'Mar 2023 – Jun 2023',
     product: 'Insurance Portal — Built from Scratch',
-    tech: ['ReactJS', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5'],
+    tech: ['Java', 'Spring Boot', 'ReactJS', 'Redux', 'HTML5', 'CSS3', 'JavaScript', 'Material UI', 'MySQL'],
     bullets: [
       'Collaborated with cross-functional team members to build an insurance portal from scratch, contributing to core UI development and feature implementation.',
+      'Built and integrated backend services using Java (Spring Boot), developing REST APIs for policy data and user management.',
+      'Worked with MySQL for data persistence and implemented basic validation, error handling, and API integration with frontend.',
       'Developed and enhanced user-facing pages using ReactJS, HTML5, CSS3, JavaScript, and Bootstrap 5, ensuring responsive and user-friendly design.',
       'Modified existing components based on evolving business requirements, including content updates, layout changes, and functionality enhancements.',
-      'Worked closely with stakeholders and internal teams to track feature requests, address issues, and provide regular status updates on development progress.',
     ],
   },
   {
@@ -51,18 +49,6 @@ const EXPERIENCES = [
     bullets: [
       'Enhanced and maintained existing web application pages by updating content, layouts, and functionality using ReactJS, HTML5, CSS3, JavaScript, and Bootstrap 5.',
       'Collaborated with cross-functional teams to analyze requirements, track ongoing change requests, and implement updates efficiently.',
-    ],
-  },
-  {
-    company: 'India SoftTech (Internship)',
-    role: 'Web Developer',
-    location: 'India',
-    period: 'Jan 2020 – Sept 2020',
-    product: 'Sai Packaging — Digitized Packaging Workflows',
-    tech: ['Web Development'],
-    bullets: [
-      'Designed and developed a Sai Packaging web application to digitize packaging workflows and significantly reduce manual paperwork.',
-      'Built and maintained material information databases supporting packaging needs across electronics, food, and other industries.',
     ],
   },
 ];
@@ -140,17 +126,20 @@ export default function Experience() {
                 <Stack
                   direction={{ xs: 'column', sm: 'row' }}
                   justifyContent="space-between"
-                  alignItems={{ sm: 'center' }}
+                  alignItems={{ sm: 'flex-start' }}
                   sx={{ mb: 1 }}
                 >
-                  <Box>
-                    <Typography variant="h6" sx={{ fontSize: '1.15rem' }}>
+                  <Box sx={{ minWidth: 0, flex: 1 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: { xs: '1rem', sm: '1.15rem' } }}
+                    >
                       {exp.role}
                     </Typography>
                     <Typography
                       variant="body2"
                       color="primary.main"
-                      sx={{ fontWeight: 600 }}
+                      sx={{ fontWeight: 600, wordBreak: 'break-word' }}
                     >
                       {exp.company} · {exp.location}
                     </Typography>
@@ -176,7 +165,7 @@ export default function Experience() {
                   {exp.product}
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 2.5, mb: 2 }}>
+                <Box component="ul" sx={{ pl: { xs: 2, sm: 2.5 }, mb: 2 }}>
                   {exp.bullets.map((bullet, j) => (
                     <Box component="li" key={j} sx={{ mb: 0.8 }}>
                       <Typography variant="body2" color="text.secondary">

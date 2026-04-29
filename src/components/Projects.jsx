@@ -7,7 +7,6 @@ import {
   Button,
 } from '@mui/material';
 import { motion } from 'framer-motion';
-import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SectionWrapper from './SectionWrapper';
 
@@ -51,19 +50,6 @@ const PROJECTS = [
       github: 'https://github.com/SwamiMalavade/code-scanner',
     },
   },
-  {
-    title: 'Raj Caterers Website',
-    tagline: 'Freelance catering service web application',
-    problem:
-      'A catering service business needed an online presence to showcase their menus, events, and provide a direct way for customers to get in touch.',
-    solution:
-      'Designed and developed a web application enabling users to view menus, explore hosted events, and contact the service provider. Implemented a responsive UI using JavaScript, HTML, CSS, and Bootstrap, deployed on Netlify.',
-    impact: 'End-to-end delivery from development to production, providing the business a professional online presence accessible across all devices.',
-    tech: ['JavaScript', 'HTML', 'Bootstrap', 'Netlify'],
-    links: {
-      live: 'https://raj-caterers.com',
-    },
-  },
 ];
 
 const cardVariants = {
@@ -90,7 +76,7 @@ export default function Projects() {
     >
       <Grid container spacing={3}>
         {PROJECTS.map((project, i) => (
-          <Grid size={{ xs: 12, md: 6 }} key={project.title}>
+          <Grid size={{ xs: 12, sm: 6 }} key={project.title}>
             <motion.div
               custom={i}
               initial="hidden"
@@ -102,7 +88,7 @@ export default function Projects() {
               <Box
                 sx={{
                   height: '100%',
-                  p: { xs: 3, md: 3.5 },
+                  p: { xs: 2.5, sm: 3, md: 3.5 },
                   borderRadius: 3,
                   border: 1,
                   borderColor: 'divider',
@@ -198,31 +184,16 @@ export default function Projects() {
                   ))}
                 </Stack>
 
-                {(project.links.live || project.links.github) && (
-                  <Stack direction="row" gap={1}>
-                    {project.links.live && (
-                      <Button
-                        size="small"
-                        startIcon={<LaunchIcon sx={{ fontSize: 16 }} />}
-                        href={project.links.live}
-                        target="_blank"
-                        sx={{ fontSize: '0.8rem' }}
-                      >
-                        Live
-                      </Button>
-                    )}
-                    {project.links.github && (
-                      <Button
-                        size="small"
-                        startIcon={<GitHubIcon sx={{ fontSize: 16 }} />}
-                        href={project.links.github}
-                        target="_blank"
-                        sx={{ fontSize: '0.8rem' }}
-                      >
-                        Code
-                      </Button>
-                    )}
-                  </Stack>
+                {project.links.github && (
+                  <Button
+                    size="small"
+                    startIcon={<GitHubIcon sx={{ fontSize: 16 }} />}
+                    href={project.links.github}
+                    target="_blank"
+                    sx={{ fontSize: '0.8rem' }}
+                  >
+                    Code
+                  </Button>
                 )}
               </Box>
             </motion.div>

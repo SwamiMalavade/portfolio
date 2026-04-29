@@ -42,7 +42,11 @@ export default function Contact() {
             size="large"
             startIcon={<EmailIcon />}
             href="mailto:swami.91196@gmail.com"
-            sx={{ mb: 4 }}
+            sx={{
+              mb: 4,
+              fontSize: { xs: '0.8rem', sm: '0.95rem' },
+              px: { xs: 2.5, sm: 3 },
+            }}
           >
             swami.91196@gmail.com
           </Button>
@@ -74,7 +78,7 @@ export default function Contact() {
         </Box>
       </motion.div>
 
-      <Box sx={{ textAlign: 'center', mt: 10, pb: 2 }}>
+      <Box sx={{ textAlign: 'center', mt: { xs: 6, md: 10 }, pb: 2 }}>
         <Link to="hero" spy smooth offset={-70} duration={800}>
           <IconButton size="small" sx={{ mb: 2, border: 1, borderColor: 'divider' }}>
             <ArrowUpwardIcon fontSize="small" />

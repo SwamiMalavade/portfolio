@@ -21,10 +21,10 @@ export default function SectionWrapper({ id, title, subtitle, children, maxWidth
           variants={fadeUp}
         >
           {title && (
-            <Box sx={{ mb: 6 }}>
+            <Box sx={{ mb: { xs: 4, md: 6 } }}>
               <Typography
                 variant="h3"
-                sx={{ fontSize: { xs: '1.8rem', md: '2.4rem' }, mb: 1 }}
+                sx={{ fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.4rem' }, mb: 1 }}
               >
                 {title}
               </Typography>

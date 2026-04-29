@@ -40,7 +40,7 @@ export default function Education() {
     >
       <Grid container spacing={3}>
         {EDUCATION.map((edu, i) => (
-          <Grid size={{ xs: 12, md: 6 }} key={edu.degree}>
+          <Grid size={{ xs: 12, sm: 6 }} key={edu.degree}>
             <motion.div
               custom={i}
               initial="hidden"

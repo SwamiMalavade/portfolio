@@ -5,17 +5,17 @@ import SectionWrapper from './SectionWrapper';
 const SKILL_CATEGORIES = [
   {
     title: 'Programming Languages',
-    skills: ['ReactJS', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Angular', 'Redux'],
+    skills: ['Java', 'ReactJS', 'JavaScript', 'TypeScript', 'Redux', 'HTML5', 'CSS3', 'Angular', 'MySQL', 'NoSQL'],
     color: '#2563EB',
   },
   {
     title: 'Frameworks & Libraries',
-    skills: ['ExpressJS', 'Node.js', 'NestJS', 'Bootstrap 5', 'Material UI (MUI)', 'JWT'],
+    skills: ['ExpressJS', 'Spring Boot', 'Node.js', 'NestJS', 'Bootstrap 5', 'Material UI (MUI)', 'JWT'],
     color: '#7C3AED',
   },
   {
     title: 'Databases & Cloud',
-    skills: ['MySQL', 'NoSQL', 'PostgreSQL', 'S3 Bucket', 'No-Code Platforms', 'Composable DataOps'],
+    skills: ['PostgreSQL', 'S3 Bucket', 'Composable DataOps'],
     color: '#059669',
   },
   {

@@ -3,7 +3,7 @@ import SectionWrapper from './SectionWrapper';
 
 const STATS = [
   { value: '4+', label: 'Years Experience' },
-  { value: '4', label: 'Companies' },
+  { value: '3', label: 'Companies' },
   { value: 'MSc', label: 'Computer Science' },
   { value: '3+', label: 'Side Projects' },
 ];
@@ -15,22 +15,21 @@ export default function About() {
       title="About Me"
       subtitle="Developer, team player, problem-solver."
     >
-      <Grid container spacing={6} alignItems="flex-start">
+      <Grid container spacing={{ xs: 4, md: 6 }} alignItems="flex-start">
         <Grid size={{ xs: 12, md: 7 }}>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 2.5 }}>
             I'm a Senior Software Developer with 4+ years of hands-on experience building
-            scalable and responsive web applications using ReactJS, Redux, Node.js, ExpressJS,
-            and NestJS. I've led small teams, owned end-to-end delivery of client projects,
-            and consistently met timelines in fast-paced environments.
+            scalable and responsive web applications using Java, Spring Boot, ReactJS, Redux,
+            Node.js, ExpressJS, and NestJS. I've led small teams, owned end-to-end delivery
+            of client projects, and consistently met timelines in fast-paced environments.
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 2.5 }}>
             I've worked across multiple domains including fintech, pharmaceutical, and insurance,
             delivering secure and user-focused solutions. My experience spans usability improvements,
-            accessibility guidelines, and building intuitive UI using Material UI (MUI), along with
-            backend development including role-based and column-level permission systems.
+            accessibility guidelines, and building intuitive UI using Material UI (MUI).
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            I hold an MSc in Computer Science from Nowrosjee Wadia College, Pune. I'm comfortable
+            I hold an MSc in Computer Science from Nowrosjee Wadia College, Pune. I'm proficient
             working in Agile/Scrum environments with direct client interaction and have a strong
             interest in AI-powered applications, demonstrated through multiple side projects
             focused on automation, productivity, and security.
@@ -43,7 +42,7 @@ export default function About() {
               <Grid size={{ xs: 6 }} key={stat.label}>
                 <Box
                   sx={{
-                    p: 3,
+                    p: { xs: 2, sm: 3 },
                     borderRadius: 3,
                     border: 1,
                     borderColor: 'divider',

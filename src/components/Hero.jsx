@@ -1,13 +1,13 @@
 import { Box, Container, Typography, Button, Stack, Chip, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-scroll';
 
 const FOCUS_AREAS = [
-  'ReactJS',
+  'Java / Spring Boot',
+  'ReactJS / Redux',
   'Node.js / NestJS',
   'Full-Stack Development',
   'AI-Powered Applications',
@@ -48,8 +48,11 @@ export default function Hero() {
       />
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-        <Grid container spacing={6} alignItems="center">
-          <Grid size={{ xs: 12, md: 7 }}>
+        <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
+          <Grid
+            size={{ xs: 12, md: 7 }}
+            sx={{ order: { xs: 2, md: 1 }, textAlign: { xs: 'center', md: 'left' } }}
+          >
             <motion.div initial="hidden" animate="visible" variants={fadeUp(0)}>
               <Typography
                 variant="body2"
@@ -69,7 +72,7 @@ export default function Hero() {
               <Typography
                 variant="h1"
                 sx={{
-                  fontSize: { xs: '2.8rem', sm: '3.5rem', md: '4.2rem' },
+                  fontSize: { xs: '2.2rem', sm: '3rem', md: '4.2rem' },
                   lineHeight: 1.1,
                   mb: 2,
                 }}
@@ -85,17 +88,23 @@ export default function Hero() {
                 sx={{
                   fontWeight: 400,
                   mb: 3,
-                  fontSize: { xs: '1.1rem', md: '1.3rem' },
+                  fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.3rem' },
                   lineHeight: 1.6,
                 }}
               >
                 Senior Software Developer with 4+ years of experience building scalable
-                and responsive web applications using ReactJS, Redux, Node.js, and NestJS.
+                and responsive web applications using Java, Spring Boot, ReactJS, Redux,
+                Node.js, ExpressJS, and NestJS.
               </Typography>
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={fadeUp(0.3)}>
-              <Stack direction="row" flexWrap="wrap" gap={1} sx={{ mb: 4 }}>
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                gap={1}
+                sx={{ mb: 4, justifyContent: { xs: 'center', md: 'flex-start' } }}
+              >
                 {FOCUS_AREAS.map((area) => (
                   <Chip
                     key={area}
@@ -109,15 +118,12 @@ export default function Hero() {
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={fadeUp(0.4)}>
-              <Stack direction="row" flexWrap="wrap" gap={1.5}>
-                {/* <Button
-                  variant="contained"
-                  startIcon={<DescriptionIcon />}
-                  href="/resume.pdf"
-                  target="_blank"
-                >
-                  Resume
-                </Button> */}
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                gap={1.5}
+                sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}
+              >
                 <Button
                   variant="outlined"
                   startIcon={<GitHubIcon />}
@@ -143,12 +149,15 @@ export default function Hero() {
             </motion.div>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 5 }} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid
+            size={{ xs: 12, md: 5 }}
+            sx={{ display: 'flex', justifyContent: 'center', order: { xs: 1, md: 2 } }}
+          >
             <motion.div initial="hidden" animate="visible" variants={fadeScale}>
               <Box
                 sx={{
-                  width: { xs: 260, sm: 300, md: 340 },
-                  height: { xs: 260, sm: 300, md: 340 },
+                  width: { xs: 200, sm: 260, md: 340 },
+                  height: { xs: 200, sm: 260, md: 340 },
                   borderRadius: '50%',
                   padding: '4px',
                   background: 'linear-gradient(135deg, #2563EB, #7C3AED)',
