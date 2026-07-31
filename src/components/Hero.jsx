@@ -8,7 +8,7 @@ import { Link } from 'react-scroll';
 const FOCUS_AREAS = [
   'Java / Spring Boot',
   'ReactJS / Redux',
-  'Node.js / NestJS',
+  'Node.js / Express, NestJS',
   'Full-Stack Development',
   'AI-Powered Applications',
 ];
@@ -236,7 +236,9 @@ export default function Hero() {
                     {',\n'}
                     {'  experience: '}
                     <span style={CODE_TOKEN.num}>4</span>
-                    {'+,\n'}
+                    {'+'}
+                    <span style={CODE_TOKEN.str}> years</span>
+                     {',\n'}
                     {'  stack: ['}
                     <span style={CODE_TOKEN.str}>"Node"</span>
                     {', '}
@@ -250,7 +252,10 @@ export default function Hero() {
                     {'  degree: '}
                     <span style={CODE_TOKEN.str}>"MSc (Computer Science)"</span>
                     {',\n'}
-                    {'  '}                  
+                    {'  available: '}
+                    <span style={CODE_TOKEN.str}>true</span>
+                    {',\n'}
+                    {'}'}                  
                   </code>
                 </Box>
               </Box>

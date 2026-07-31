@@ -25,8 +25,8 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Education />
         <Certifications />
+        <Education />
         <Contact />
       </Box>
     </ThemeProvider>
