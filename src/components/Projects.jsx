@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import SectionWrapper from './SectionWrapper';
 
 const PROJECTS = [
@@ -48,6 +49,19 @@ const PROJECTS = [
     tech: ['TypeScript', 'React', 'NestJS', 'REST', 'Cohere AI'],
     links: {
       github: 'https://github.com/SwamiMalavade/code-scanner',
+    },
+  },
+  {
+    title: 'Raj Caterers',
+    tagline: 'Live static website for a catering business',
+    problem:
+      'A local catering service needed an online presence to showcase its menu and offerings so customers could browse products without calling in.',
+    solution:
+      'Built and deployed a responsive static website with a clean, mobile-friendly layout to present the catering menu and services, using Bootstrap for consistent, fast-loading UI components.',
+    impact: 'Live in production, giving the business a public storefront customers can browse to view offerings before placing an order.',
+    tech: ['HTML5', 'CSS3', 'Bootstrap'],
+    links: {
+      live: 'https://raj-caterers.com/',
     },
   },
 ];
@@ -184,17 +198,30 @@ export default function Projects() {
                   ))}
                 </Stack>
 
-                {project.links.github && (
-                  <Button
-                    size="small"
-                    startIcon={<GitHubIcon sx={{ fontSize: 16 }} />}
-                    href={project.links.github}
-                    target="_blank"
-                    sx={{ fontSize: '0.8rem' }}
-                  >
-                    Code
-                  </Button>
-                )}
+                <Stack direction="row" spacing={1}>
+                  {project.links.github && (
+                    <Button
+                      size="small"
+                      startIcon={<GitHubIcon sx={{ fontSize: 16 }} />}
+                      href={project.links.github}
+                      target="_blank"
+                      sx={{ fontSize: '0.8rem' }}
+                    >
+                      Code
+                    </Button>
+                  )}
+                  {project.links.live && (
+                    <Button
+                      size="small"
+                      startIcon={<OpenInNewIcon sx={{ fontSize: 16 }} />}
+                      href={project.links.live}
+                      target="_blank"
+                      sx={{ fontSize: '0.8rem' }}
+                    >
+                      Live Site
+                    </Button>
+                  )}
+                </Stack>
               </Box>
             </motion.div>
           </Grid>

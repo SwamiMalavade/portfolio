@@ -26,6 +26,7 @@ const NAV_ITEMS = [
   { label: 'Experience', to: 'experience' },
   { label: 'Projects', to: 'projects' },
   { label: 'Education', to: 'education' },
+  { label: 'Certifications', to: 'certifications' },
   { label: 'Contact', to: 'contact' },
 ];
 
@@ -101,7 +102,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               }}
             >
               <Link to="hero" spy smooth offset={-70} duration={500}>
-                SM
+                Swami Malavade
               </Link>
             </Typography>
 
