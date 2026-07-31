@@ -23,6 +23,13 @@ const fadeScale = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.7, delay: 0.2, ease: 'easeOut' } },
 };
 
+const CODE_TOKEN = {
+  kw: { color: '#c586c0' },
+  str: { color: '#98c379' },
+  num: { color: '#d19a66' },
+  fn: { color: '#61afef' },
+};
+
 export default function Hero() {
   return (
     <Box
@@ -153,28 +160,99 @@ export default function Hero() {
             size={{ xs: 12, md: 5 }}
             sx={{ display: 'flex', justifyContent: 'center', order: { xs: 1, md: 2 } }}
           >
-            <motion.div initial="hidden" animate="visible" variants={fadeScale}>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeScale}
+              style={{ position: 'relative', width: '100%', maxWidth: 380 }}
+            >
+              <Box
+                aria-hidden="true"
+                sx={{
+                  position: 'absolute',
+                  width: { xs: 160, sm: 200, md: 240 },
+                  height: { xs: 160, sm: 200, md: 240 },
+                  borderRadius: '50%',
+                  top: -36,
+                  right: -24,
+                  background:
+                    'radial-gradient(circle, rgba(37, 99, 235, 0.45) 0%, rgba(124, 58, 237, 0.25) 55%, transparent 75%)',
+                  filter: 'blur(30px)',
+                  zIndex: 0,
+                  animation: 'heroOrbFloat 6s ease-in-out infinite',
+                  '@keyframes heroOrbFloat': {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-18px)' },
+                  },
+                }}
+              />
+
               <Box
                 sx={{
-                  width: { xs: 200, sm: 260, md: 340 },
-                  height: { xs: 200, sm: 260, md: 340 },
-                  borderRadius: '50%',
-                  padding: '4px',
-                  background: 'linear-gradient(135deg, #2563EB, #7C3AED)',
+                  position: 'relative',
+                  zIndex: 1,
+                  borderRadius: 3,
+                  overflow: 'hidden',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.35)',
+                  bgcolor: '#1e1e2e',
                 }}
               >
                 <Box
-                  component="img"
-                  src="/profile.png"
-                  alt="Swami Malavade"
                   sx={{
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    display: 'block',
+                    display: 'flex',
+                    gap: 0.9,
+                    px: 2,
+                    py: 1.3,
+                    bgcolor: 'rgba(255,255,255,0.04)',
+                    borderBottom: '1px solid rgba(255,255,255,0.08)',
                   }}
-                />
+                >
+                  <Box sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: '#ff5f56' }} />
+                  <Box sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: '#ffbd2e' }} />
+                  <Box sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: '#27c93f' }} />
+                </Box>
+
+                <Box
+                  component="pre"
+                  sx={{
+                    m: 0,
+                    p: { xs: 2, sm: 3 },
+                    overflowX: 'auto',
+                    fontFamily: '"JetBrains Mono", monospace',
+                    fontSize: { xs: '0.72rem', sm: '0.82rem' },
+                    lineHeight: 1.7,
+                    color: '#d4d4d4',
+                  }}
+                >
+                  <code>
+                    <span style={CODE_TOKEN.kw}>const</span>
+                    {' engineer = {\n'}
+                    {'  name: '}
+                    <span style={CODE_TOKEN.str}>"Swami Malavade"</span>
+                    {',\n'}
+                    {'  role: '}
+                    <span style={CODE_TOKEN.str}>"Full Stack Engineer"</span>
+                    {',\n'}
+                    {'  experience: '}
+                    <span style={CODE_TOKEN.num}>4</span>
+                    {'+,\n'}
+                    {'  stack: ['}
+                    <span style={CODE_TOKEN.str}>"Node"</span>
+                    {', '}
+                    <span style={CODE_TOKEN.str}>"Express, NestJS"</span>
+                    {',\n'}
+                    {'          '}
+                    <span style={CODE_TOKEN.str}>"React"</span>
+                    {', '}
+                    <span style={CODE_TOKEN.str}>"MySQL, NoSQL"</span>
+                    {'],\n'}
+                    {'  degree: '}
+                    <span style={CODE_TOKEN.str}>"MSc (Computer Science)"</span>
+                    {',\n'}
+                    {'  '}                  
+                  </code>
+                </Box>
               </Box>
             </motion.div>
           </Grid>
