@@ -20,7 +20,7 @@ const SKILL_CATEGORIES = [
   },
   {
     title: 'Tools & Practices',
-    skills: ['Visual Studio Code', 'Cursor', 'Visual Studio', 'IntelliJ', 'PyCharm', 'Git', 'axe DevTools', 'Agile/Scrum', 'REST APIs'],
+    skills: ['Visual Studio Code', 'Cursor', 'Claude', 'Visual Studio', 'IntelliJ', 'PyCharm', 'Git', 'axe DevTools', 'Agile/Scrum', 'REST APIs'],
     color: '#D97706',
   },
 ];

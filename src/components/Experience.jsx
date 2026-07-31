@@ -27,7 +27,7 @@ const EXPERIENCES = [
   {
     company: 'LMV IT Solutions',
     role: 'Software Developer',
-    location: 'India',
+    location: 'Hyderabad, India',
     period: 'Mar 2023 – Jun 2023',
     product: 'Insurance Portal — Built from Scratch',
     tech: ['Java', 'Spring Boot', 'ReactJS', 'Redux', 'HTML5', 'CSS3', 'JavaScript', 'Material UI', 'MySQL'],
@@ -42,7 +42,7 @@ const EXPERIENCES = [
   {
     company: 'Infosys',
     role: 'Technical Executive',
-    location: 'India',
+    location: 'Pune, India',
     period: 'Jan 2021 – Jul 2022',
     product: 'Web Application Maintenance & Enhancement',
     tech: ['ReactJS', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5'],
