@@ -34,13 +34,18 @@ export default function Hero() {
   return (
     <Box
       id="hero"
-      sx={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
+       sx={{
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    overflow: 'hidden',
+    pt: {
+      xs: '90px', // Mobile
+      sm: '100px', // Small tablets
+      md: 0, // Desktop (no extra padding)
+    },
+  }}
     >
       <Box
         sx={{
@@ -58,7 +63,7 @@ export default function Hero() {
         <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
           <Grid
             size={{ xs: 12, md: 7 }}
-            sx={{ order: { xs: 2, md: 1 }, textAlign: { xs: 'center', md: 'left' } }}
+            sx={{ order: { xs: 1, md: 1 }, textAlign: { xs: 'center', md: 'left' } }}
           >
             <motion.div initial="hidden" animate="visible" variants={fadeUp(0)}>
               <Typography
