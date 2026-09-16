@@ -4,7 +4,6 @@ import {
   Chip,
   Stack,
 } from '@mui/material';
-import { motion } from 'framer-motion';
 import WorkIcon from '@mui/icons-material/Work';
 import SectionWrapper from './SectionWrapper';
 

@@ -6,7 +6,6 @@ import {
   Grid,
   Button,
 } from '@mui/material';
-import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import SectionWrapper from './SectionWrapper';

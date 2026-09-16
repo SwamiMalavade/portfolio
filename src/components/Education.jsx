@@ -1,6 +1,5 @@
 import { Typography, Box, Stack, Grid, Chip } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
-import { motion } from 'framer-motion';
 import SectionWrapper from './SectionWrapper';
 
 const EDUCATION = [

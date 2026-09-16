@@ -1,7 +1,6 @@
 import { Typography, Box, Stack, Grid, Button } from '@mui/material';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { motion } from 'framer-motion';
 import SectionWrapper from './SectionWrapper';
 
 const CERTIFICATIONS = [

@@ -1,5 +1,4 @@
 import { Typography, Box, Chip, Stack, Grid } from '@mui/material';
-import { motion } from 'framer-motion';
 import SectionWrapper from './SectionWrapper';
 
 const SKILL_CATEGORIES = [

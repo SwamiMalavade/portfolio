@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
